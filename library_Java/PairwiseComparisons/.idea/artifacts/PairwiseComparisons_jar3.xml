@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PairwiseComparisons:jar3">
+    <output-path>$PROJECT_DIR$/out/artifacts/PairwiseComparisons_jar3</output-path>
+    <root id="archive" name="PairwiseComparisons.jar">
+      <element id="module-output" name="PairwiseComparisons" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/RCaller.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
