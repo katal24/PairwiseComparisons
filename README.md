@@ -1,13 +1,13 @@
 # PairwiseComparisons library
 
 ### The repository contains:
-* library_R:
-** R package
-* library_Java directory:
-** Java source code of the library,
-** R file - responsible for computing
-** TryPC - Example project in Java, which shows the use of the library
-** .jar library
+##### library_R:
+* R package
+##### library_Java directory:
+* Java source code of the library,
+* R file - responsible for computing
+* TryPC - Example project in Java, which shows the use of the library
+* .jar library
 
 ### In order to use PairwiseComparisons library in own project need to:
 1. Install R package (http://cran.us.r-project.org/)
