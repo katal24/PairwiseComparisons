@@ -3,6 +3,7 @@
 ### The repository contains:
 ##### library_R:
 * R package
+
 ##### library_Java directory:
 * Java source code of the library,
 * R file - responsible for computing
