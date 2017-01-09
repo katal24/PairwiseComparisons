@@ -45,7 +45,7 @@ public class PairwiseComparisons {
         this.engineIsOpen = false;
         this.R = R;
         this.Rscript = Rscript;
-        this.pathToSource = pathToSource;
+        this.pathToSource = replace(pathToSource);
     }
 
     public PairwiseComparisons(String R, String Rscript){
@@ -63,7 +63,7 @@ public class PairwiseComparisons {
         this.engineIsOpen = false;
         this.R = R;
         this.Rscript = Rscript;
-        this.pathToSource = pathToSource;
+        this.pathToSource = replace(pathToSource);
         if(keepOpenConnection){
             makeCaller();
         }
@@ -96,7 +96,7 @@ public class PairwiseComparisons {
 
     private void makeCaller(){
         engine = new RCallerScriptEngine(this.R, this.Rscript);
-        Thread openFileThread = new Thread(new TimeCounter(2, true));
+        Thread openFileThread = new Thread(new TimeCounter(10, true));
         openFileThread.start();
         try {
             engine.eval("source(\""+this.pathToSource+"\")");
@@ -107,6 +107,10 @@ public class PairwiseComparisons {
         }
 
         engineIsOpen = true;
+    }
+
+    public String replace(String path){
+        return path.replace("\\","/");
     }
 
     public void close(){
